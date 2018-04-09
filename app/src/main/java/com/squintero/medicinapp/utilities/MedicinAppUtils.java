@@ -1,7 +1,4 @@
-package com.squintero.medicinapp.Utilities;
-
-import android.content.Context;
-import android.util.Log;
+package com.squintero.medicinapp.utilities;
 
 
 /**

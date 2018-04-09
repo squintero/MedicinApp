@@ -14,12 +14,13 @@ public class DatabaseModel {
     }
 
     //--------------
+    private static final String dbName = "medicinapp-db";
     private AppDatabase db = null;
 
     public AppDatabase getDbInstance(Context context){
 
         if (db == null)
-            db = Room.databaseBuilder(context, AppDatabase.class, "medicinapp-db").build();
+            db = Room.databaseBuilder(context, AppDatabase.class, dbName).build();
 
         return db;
     }
