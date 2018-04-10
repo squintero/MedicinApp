@@ -3,6 +3,7 @@ package com.squintero.medicinapp.utilities;
 import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.widget.Toast;
 
@@ -114,11 +115,11 @@ public final class DialogMessageManager {
                 .show();
     }
 
-//    public static void showSnackBar(View view, String message, String actionText,
-//                                    View.OnClickListener onClickListener)
-//    {
-//        Snackbar.make(view, message, Snackbar.LENGTH_LONG).setAction(actionText, onClickListener).show();
-//    }
+    public static void showSnackBar(View view, String message, String actionText,
+                                    View.OnClickListener onClickListener)
+    {
+        Snackbar.make(view, message, Snackbar.LENGTH_LONG).setAction(actionText, onClickListener).show();
+    }
 
     public static void showToast(Context context, String message, int duration) {
 

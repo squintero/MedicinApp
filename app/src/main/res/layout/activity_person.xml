@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="view"
+            type="com.squintero.medicinapp.ui.person.PersonView.Activity" />
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true">
+
+        <!-- Top Action bar -->
+        <include android:id="@+id/incToolbarTop"
+            layout="@layout/toolbar_top" />
+
+        <!-- Main content -->
+        <FrameLayout
+            android:id="@+id/containerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <!-- Loading view -->
+        <include
+            android:id="@+id/loading"
+            layout="@layout/layout_loading" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</layout>

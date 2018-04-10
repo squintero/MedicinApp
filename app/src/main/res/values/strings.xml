@@ -11,4 +11,8 @@
     <string name="action_example">Example action</string>
 
     <string name="action_settings">Settings</string>
+
+    <!-- Person List -->
+    <string name="text_person_list_empty">Your list is empty.\nAdd your first person!</string>
+
 </resources>
