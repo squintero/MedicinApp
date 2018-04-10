@@ -2,7 +2,148 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBarOverlay">true</item>
+        <item name="android:windowContentOverlay">@null</item>
         <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!-- AlertDialog -->
+    <style name="MyTitleTextStyle">
+        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Title</item>
+    </style>
+
+    <style name="MyAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowTitleStyle">@style/MyTitleTextStyle</item>    <!-- Used for the title -->
+        <item name="colorAccent">@color/colorAccent</item>                     <!-- Used for the buttons -->
+        <item name="android:textColorPrimary">@color/black</item>               <!-- Used for the title and text -->
+        <item name="android:textColor">@color/black</item>                      <!-- Used for the title and text -->
+        <item name="android:textStyle">bold</item>                              <!-- Used for style of the buttons -->
+        <item name="android:background">@color/white</item>                     <!-- Used for the background -->
+    </style>
+
+    <!-- Buttons -->
+    <!-- Base button borderless and without shadow -->
+    <style name="BaseButton" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:paddingBottom">2dp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+    </style>
+
+    <!-- Button dark blue -->
+    <style name="ButtonDarkBlue" parent="BaseButton">
+        <item name="android:background">@drawable/button_dark_blue</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!-- Button light blue blue -->
+    <style name="ButtonLightBlue" parent="BaseButton">
+        <item name="android:background">@drawable/button_light_blue</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!-- Button without background. Light Blue Text -->
+    <style name="ButtonTransparentPrimaryColorText" parent="BaseButton">
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <item name="android:textColor">@color/text_light_blue</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <!-- EditTexts -->
+    <!-- Base input -->
+    <style name="BaseInput">
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:minHeight">50dp</item>
+        <item name="android:paddingBottom">2dp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+    </style>
+
+    <!-- Base TextInputLayout -->
+    <style name="BaseTextInputLayout" >
+        <item name="android:layout_height">55dp</item>
+        <item name="android:gravity">bottom</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:clipToPadding">false</item>
+    </style>
+
+    <!-- EditText primary color -->
+    <style name="EditTextPrimaryColor" parent="BaseInput">
+        <!--<item name="android:background">@drawable/input_white</item>-->
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textColorHint">@color/gray_hint</item>
+    </style>
+
+    <!-- EditText white background color -->
+    <style name="EditTextWhiteBackground" parent="BaseInput">
+        <item name="android:background">@color/white</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textColorHint">@color/gray_hint</item>
+    </style>
+
+    <!-- TextInputLayout primary color -->
+    <style name="TextInputLayoutPrimaryColor" parent="BaseTextInputLayout">
+        <!-- Colors -->
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textColorHint">@color/gray_hint</item>              <!-- Hint text color -->
+        <item name="android:textColorHighlight">@color/colorAccent</item>      <!-- Text color when selectedValue text field -->
+        <item name="android:textColorLink">@color/gray</item>            <!-- Line below text when writing -->
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">@color/colorPrimary</item>        <!-- Line input normal -->
+        <item name="colorControlActivated">@color/colorPrimary</item>          <!-- Text and line when selectedValue -->
+    </style>
+
+    <!-- TextView -->
+    <style name="BaseTextView">
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!-- TextView primary color -->
+    <style name="TextViewPrimaryColor" parent="BaseTextView">
+        <!-- Colors -->
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="TextViewLightBlue" parent="BaseTextView">
+        <!-- Colors -->
+        <item name="android:textColor">@color/light_blue</item>
+    </style>
+
+    <style name="TextViewSubtitleDetailDossier" parent="BaseTextView">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/dark_blue</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
     </style>
 
 </resources>

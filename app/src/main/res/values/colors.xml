@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00396e</color>
+    <color name="colorPrimaryDark">#00396e</color>
+    <color name="colorAccent">#00396e</color>
+
+    <color name="colorPrimaryText">#DE000000</color>
+
+    <!-- Buttons -->
+    <color name="button_dark_blue">#00396e</color>
+    <color name="button_dark_blue_pressed">#AA00396e</color>
+    <color name="button_light_blue">#5c83aa</color>
+    <color name="button_light_blue_pressed">#AA5c83aa</color>
+    <color name="button_text_color">@color/white</color>
+
+    <!-- Colors -->
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="gray">#3F3F3F</color>
+    <color name="gray_hint">#777777</color>
+    <color name="dark_blue">#00396e</color>
+    <color name="light_blue">#5c83aa</color>
+
+    <!-- slider indicator -->
+    <color name="slider_indicator_selected">#ce3341</color>
+    <color name="slider_indicator_selected_off">@color/white</color>
+
+    <!-- Texts -->
+    <color name="text_light_blue">#74b7fa</color>
+
+</resources>
