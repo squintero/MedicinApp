@@ -12,13 +12,13 @@ import java.util.List;
 @Dao
 public interface PersonDao {
 
-    @Query("SELECT * FROM persondata")
+    @Query("SELECT * FROM persons")
     List<PersonData> getAll();
 
-    @Query("SELECT * FROM persondata WHERE id IN (:personDataIds)")
+    @Query("SELECT * FROM persons WHERE id IN (:personDataIds)")
     List<PersonData> loadAllByIds(int[] personDataIds);
 
-    @Query("SELECT * FROM persondata WHERE id = :idToFind LIMIT 1")
+    @Query("SELECT * FROM persons WHERE id = :idToFind LIMIT 1")
     PersonData findOneById(int idToFind);
 
     @Insert
